@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Page Title</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Hello, world!</h1>
+  <button id="btnShare" onclick="share()">CLIC</button>
+
+</body>
+<script>
+function share(){
+  if (navigator.share) {
+    navigator.share({
+      title: 'Web Fundamentals',
+      text: 'Check out Web Fundamentals — it rocks!',
+      url: 'https://developers.google.com/web',
+    })
+    .then(() => alert('Successfull'))
+    .catch((error) => alert(error));
+  }else{
+    alert('NO tiene share')
+  }
+}
+
+
+</script>
+</html></html>
